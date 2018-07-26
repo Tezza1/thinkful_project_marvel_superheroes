@@ -1,0 +1,11 @@
+html  {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 50%;
+}
+
+.movie-pic {
+    max-width: 20%;
+}
