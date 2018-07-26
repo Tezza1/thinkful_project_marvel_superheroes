@@ -7,6 +7,7 @@ function superHeroSearch() {
       superhero_character = $('.superhero-search').val();
       getComicData();
       getMovieData();
+      findYouTubeVideos()
   });  
 }
 
@@ -24,8 +25,8 @@ function getComicData(){
         dataType: 'json',
         type: 'GET',
         success: function() {
-            console.log(search_results);
-            console.log(search_results.responseJSON.data.results);
+            // console.log(search_results);
+            // console.log(search_results.responseJSON.data.results);
             renderComicData(search_results);
         },
         error: function() {
@@ -73,8 +74,8 @@ function getMovieData() {
         dataType: 'json',
         type: 'GET',
         success: function() {
-            console.log(search_results);
-            console.log(search_results.responseJSON.results);
+            // console.log(search_results);
+            // console.log(search_results.responseJSON.results);
             renderMovieData(search_results.responseJSON.results);
         },
         error: function() {
@@ -107,5 +108,47 @@ function renderMovieData(search_results) {
     }
     $('.display-movies-results').html(movieData);
 }
+
+function findYouTubeVideos() {
+
+    const YOUTUBE_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
+    const API_KEY = "AIzaSyDEwfk3b9G0Oap6N7GHBeDHPzhnXxxr5hM";
+
+    const settings = {
+        url: YOUTUBE_SEARCH_URL,
+        data: {
+            part: 'snippet',
+            key: API_KEY,
+            channelId: 'UCvC4D8onUfXzvjTOM-dBfEA',
+            q: `${superhero_character} in:name`,
+            per_page: 5
+        },
+        dataType: 'json',
+        type: 'GET',
+        success: function() {
+            renderYouTubeData(search_results);
+        },
+        error: function() {
+            console.log("An error occurred");
+        }
+    };
+
+    let search_results = $.ajax(settings);
+}
+
+function renderYouTubeData(search_results) {
+    let result_arr = search_results.responseJSON.items;
+    let resultString = "";
+    result_arr.map(result => {
+        resultString += `
+            <h2>${result.snippet.title}</h2>
+            <p>${result.snippet.description}</p>
+            <p>Channel: ${result.snippet.channelTitle}</p>
+            <p>Published: ${result.snippet.publishedAt}</p>
+            <iframe src="https://www.youtube.com/embed/${result.id.videoId}" allow="autoplay; encrypted-media" width="350" height="200" frameborder="0" allowFullScreen></iframe>`
+    });
+    $('.display-trailer').html(resultString);
+} 
+
 
 $(superHeroSearch)
