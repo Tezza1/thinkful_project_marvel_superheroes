@@ -1,3 +1,5 @@
+// const MOVIEDB_SEARCH_URL = 'https://api.themoviedb.org/3/genre/movie/list'; --> provides list of genres
+
 {"genres":[
     {"id":28,"name":"Action"},
     {"id":12,"name":"Adventure"},

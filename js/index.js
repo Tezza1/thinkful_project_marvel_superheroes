@@ -41,7 +41,7 @@ function renderComicData(search_results) {
     const COMIC_PATH = search_results.responseJSON.data.results;
     $('.character-name').html(`${COMIC_PATH[0].name}`);
     $('.character-description').html(`${COMIC_PATH[0].description}`);
-    $('.character-pic').html(`<img src="${COMIC_PATH[0].thumbnail.path}.jpg" alt="" />}`);
+    $('.character-pic').html(`<img src="${COMIC_PATH[0].thumbnail.path}.jpg" alt="" class="character-pic"/>`);
     
     // show links in a list
     let character_links = "";

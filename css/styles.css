@@ -2,8 +2,29 @@ html  {
     font-family: sans-serif;
 }
 
-img {
-    max-width: 50%;
+/* HEADER */
+.header-image {
+    display: block;
+    margin: 0 auto;
+    margin-top: -3em;
+    padding-top: 0;
+    width: 100%;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #eb1c24;
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin-top: -1em;
+}
+
+/* CHARACTER INFO */
+.character-pic {
+    max-width: 100%;
+    border-radius: 2%;
 }
 
 .movie-pic {

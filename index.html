@@ -4,50 +4,74 @@
     <meta charset="UTF-8" />
     <title>Marvel Movie Superheros</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/LeaVerou/awesomplete/gh-pages/awesomplete.css" />
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 
 <body>
-    <h1>The Marvel Movie Superhero Search</h1>
-    <p>Descriptions, Comics, Movie Posters and Trailers.</p>
-    <form>
-        <fieldset>
-            <legend>Search for Marvel Superheros</legend>
-            <label for="superheo-search">Search</label>
-            <input type="text" name="" class="superhero-search"/>
-            <input type="button" value="Submit" class="js-superhero-search">
-        </fieldset>
-    </form>
-  
-    <h2><span class="character-name"></span></h2>
-    <p class="character-description"></p>
-    <div class="character-links">
-        <ul>
+    <img class="header-image" src="images/The_Marvel_Universe.png" alt=""></img>
+    <div class="row">
+        <div class="col-12">
+            <h1>The Marvel Movie Superhero Search</h1>
+        </div>    
+    </div> <!-- end row -->
+    <div class="row">
+        <div class="col-12">
+            <form>
+                <fieldset>
+                    <legend>Search for Marvel Superheros</legend>
+                    <label for="superheo-search">Search</label>
+                    <input type="text" name="" class="superhero-search awesomplete"
+                        data-list= "Ant-Man, Black Panther, Captain America, Daredevil, Deadpool, Falcon, Hawkeye, Hulk, Iron Man, Spider-man, Thor, Wolverine, Doctor Strange, Nick Fury, Quicksilver" />
+                    <input type="button" value="Submit" class="js-superhero-search">
+                </fieldset>
+            </form>    
+        </div>
+    </div> <!-- end row -->
+    <div class="row">
+        <div class="col-6">
+            <div class="character-pic"></div>    
+        </div>
+        <div class="col-6">
+            <h2><span class="character-name"></span></h2>
+            <p class="character-description"></p>
+            <div class="character-links">
+                <ul>
             
-        </ul>
-    </div>
-    <div class="character-pic"></div>
-  
-    <!-- display results for comics-->
-    <h3>Comics</h3>
-    <div class="display-comic-results">
-        <ul>
-            
-        </ul>
-    </div>
-
-    <!-- display results for movies-->
-    <h3>Movies</h3>
-    <div class="display-movies-results">
+                </ul>
+            </div>    
+        </div>
+    </div><!-- end row -->
     
-    </div>
+    <!-- display results for comics-->
+    <div class="row">
+        <h3>Comics</h3>
+        <div class="display-comic-results">
+            <ul>
+                
+            </ul>
+        </div>    
+    </div><!-- end row -->
+    
+    <!-- display results for movies-->
+    <div class="row">
+        <h3>Movies</h3>
+        <div class="display-movies-results">
+        
+        </div>    
+    </div><!-- end row -->
 
     <!-- display results for movie trailer-->
-    <h3>Clips &amp; Trailer</h3>
-    <div class="display-trailer">
+    <div class="row">
+        <h3>Clips &amp; Trailer</h3>
+        <div class="display-trailer">
     
-    </div>
-  
+        </div>    
+    </div><!-- end row -->
+    
+    <script src="https://cdn.rawgit.com/LeaVerou/awesomplete/gh-pages/awesomplete.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
