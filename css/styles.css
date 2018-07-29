@@ -39,7 +39,7 @@ label {
 
 input[type="text"] {
     border: none;
-    width: 20em;
+    width: 15em;
     font-size: 150%;
     font-weight: bold;
     padding: 0.5em;
@@ -128,4 +128,47 @@ h3, h4 {
 
 .row-breaker {
     margin-bottom: 3em;
+}
+
+/* TABLET */
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 160%;
+    }
+    
+    input[type="text"] {
+        width: 12em;
+    }
+    
+}
+
+/* MOBILE PHONE */
+@media only screen and (max-width: 580px) {
+    h1 {
+        letter-spacing: 0;
+        font-size: 140%;
+    }
+    
+    input[type="text"] {
+        width: 8em;
+    }
+    
+    input[type="button"] {
+        padding: 0.5em;
+        margin-left: 0;
+    }
+}
+
+/* MOBILE PHONE */
+@media only screen and (max-width: 450px) {
+    
+    input[type="text"] {
+        display: block;
+    }
+    
+    input[type="button"] {
+        padding: 1em;
+        display: block;
+        margin-top: 0.5em;
+    }
 }
