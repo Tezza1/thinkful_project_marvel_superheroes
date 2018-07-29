@@ -38,9 +38,12 @@ label {
 }
 
 input[type="text"] {
-    padding: 1.1em;
-    background-color: #ffafaf;
     border: none;
+    width: 20em;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 0.5em;
+    border-bottom: 3px solid #eb1c24;
 }
 
 input[type="button"] {
@@ -49,6 +52,8 @@ input[type="button"] {
     border: none;
     color: white;
     font-weight: bold;
+    margin-left: 1em;
+    cursor: pointer;
 }
 
 /* CHARACTER INFO */
@@ -68,6 +73,36 @@ h2 {
 /* RESULTS */
 i {
     margin-top: 3em;
+}
+
+.fa-external-link-alt, .fa-square {
+    margin: 0 0.3em 0 0.5em;
+}
+
+.fa-square {
+    color: #eb1c24;
+}
+
+
+.external-link {
+    color: #eb1c24;
+    text-transform: uppercase;
+    border: none;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    align-content: space-between;
+}
+
+.flex-box div {
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 2%;
 }
 
 h3, h4 {

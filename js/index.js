@@ -46,16 +46,16 @@ function renderComicData(search_results) {
     // show links in a list
     let character_links = "";
     for (let i = 0; i < COMIC_PATH[0].urls.length; i++) {
-        character_links += `<li><a href='${COMIC_PATH[0].urls[i].url}' target="_blank">${COMIC_PATH[0].urls[i].type}</a></li>`
+        character_links += `<div class="ext-button"><a href='${COMIC_PATH[0].urls[i].url}' target="_blank" class="external-link">${COMIC_PATH[0].urls[i].type} <i class="fas fa-external-link-alt"></i></a></div>`
     }
-    $('.character-links ul').html(character_links);
+    $('.character-links').html(character_links);
     
     // show stories in a list
     let comic_stories = "";
     for (let i = 0; i < COMIC_PATH[0].stories.items.length; i++){
-        comic_stories += `<li>${COMIC_PATH[0].series.items[i].name}</li>`
+        comic_stories += `<div><i class="fas fa-square"></i> ${COMIC_PATH[0].series.items[i].name}</div>`
     }
-    $('.display-comic-results ul').html(comic_stories);
+    $('.display-comic-results').html(comic_stories);
 }
 
 // AJAX call for movie data
