@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marvel Superheroes">
+    <meta name="keywords" content="Marvel, Superheroes, Comics, Movies, Trailers">
+    <meta name="author" content="Terry Shenker">
     <title>Marvel Superhero Search</title>
     <link rel="shortcut icon" type="image/png" href="images/marvel_favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,14 +21,16 @@
     <div class="row">
         <img class="header-image" src="images/The_Marvel_Universe.png" alt=""></img>
     </div>
+    <header role="banner">
+        <div class="row">
+            <div class="col-12">
+                <h1>The Marvel Movie Superhero Search</h1>
+            </div>    
+        </div> <!-- end row -->    
+    </header>
     <div class="row">
         <div class="col-12">
-            <h1>The Marvel Movie Superhero Search</h1>
-        </div>    
-    </div> <!-- end row -->
-    <div class="row">
-        <div class="col-12">
-            <form>
+            <form role="form">
                 <fieldset>
                     <legend>Search for Marvel Superheros</legend>
                     <label for="superheo-search">Search</label>
@@ -35,42 +41,52 @@
             </form>    
         </div>
     </div> <!-- end row -->
-    <div class="row">
-        <div class="col-6">
-            <div class="character-pic"></div>    
-        </div>
-        <div class="col-6">
-            <h2><span class="character-name"></span></h2>
-            <p class="character-description expended-paragraph"></p>
-            <div class="character-links flex-box">
+    <main role="main" aria-live="assertive">
+        <section role="region">
+            <div class="row">
+                <div class="col-6">
+                    <div class="character-pic"></div>    
+                </div>
+                <div class="col-6">
+                    <h2><span class="character-name"></span></h2>
+                    <p class="character-description expended-paragraph"></p>
+                    <div class="character-links flex-box">
+        
+                    </div>    
+                </div>
+            </div><!-- end row -->
+        </section>
+        
+        <!-- display results for comics-->
+        <section role="region">
+            <div class="row">
+                <h3><i class="fas fa-book-open"></i> Comics</h3>
+            </div>
+            <div class="row display-comic-results flex-box">
+                <p><i class="fas fa-search"></i> Search to fill with data</p>
+            </div><!-- end row -->
+        </section>
 
-            </div>    
-        </div>
-    </div><!-- end row -->
-    
-    <!-- display results for comics-->
-    <div class="row">
-        <h3><i class="fas fa-book-open"></i> Comics</h3>
-    </div>
-    <div class="row display-comic-results flex-box">
-        <p><i class="fas fa-search"></i> Search to fill with data</p>
-    </div><!-- end row -->
-    
-    <!-- display results for movies-->
-    <div class="row">
-        <h3><i class="fas fa-video"></i> Movies</h3>
-        <div class="display-movies-results">
-            <p><i class="fas fa-search"></i> Search to fill with data</p>
-        </div>    
-    </div><!-- end row -->
-
-    <!-- display results for movie trailer-->
-    <div class="row">
-        <h3><i class="fab fa-youtube"></i> Clips &amp; Trailer</h3>
-        <div class="display-trailer">
-            <p><i class="fas fa-search"></i> Search to fill with data</p>
-        </div>    
-    </div><!-- end row -->
+        <!-- display results for movies-->
+        <section role="region">
+            <div class="row">
+                <h3><i class="fas fa-video"></i> Movies</h3>
+                <div class="display-movies-results">
+                    <p><i class="fas fa-search"></i> Search to fill with data</p>
+                </div>    
+            </div><!-- end row -->
+        </section>
+        
+        <!-- display results for movie trailer-->
+        <section role="region">
+            <div class="row">
+                <h3><i class="fab fa-youtube"></i> Clips &amp; Trailer</h3>
+                <div class="display-trailer">
+                    <p><i class="fas fa-search"></i> Search to fill with data</p>
+                </div>    
+            </div><!-- end row -->    
+        </section>
+    </main>
     
     <script src="https://cdn.rawgit.com/LeaVerou/awesomplete/gh-pages/awesomplete.min.js"></script>
     <script src="js/index.js"></script>
