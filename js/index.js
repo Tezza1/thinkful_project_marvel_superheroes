@@ -96,13 +96,18 @@ function renderMovieData(search_results) {
             }
         }
         if (display_data) {
-            movieData += `<ul>
-                <li><h3>${search_results[i].title}</h3></li>
-                <li>${search_results[i].overview}</li>
-                <li>${search_results[i].release_date}</li>
-                <li><img class="movie_pic" src="https://image.tmdb.org/t/p/w500/${search_results[i].backdrop_path}" alt=""/></li>
-                <li><img class="movie_pic" src="https://image.tmdb.org/t/p/w500/${search_results[i].poster_path}" alt=""/></li>
-            </ul>`;            
+            movieData += `
+                <div class="col-6">        
+                    <h3>${search_results[i].title}</h3>
+                    <p class="extended-paragraph">${search_results[i].overview}<p>
+                    <p>${search_results[i].release_date}</p>
+                    <img class="left-pic" src="https://image.tmdb.org/t/p/w500/${search_results[i].backdrop_path}" alt=""/>
+                </div>
+                <div class="col-6">
+                    <img class="right-pic" src="https://image.tmdb.org/t/p/w500/${search_results[i].poster_path}" alt=""/>
+                </div>
+                <div class="col-12 row-breaker"></div>
+            `;            
         }
         display_data = false;
     }
@@ -141,11 +146,14 @@ function renderYouTubeData(search_results) {
     let resultString = "";
     result_arr.map(result => {
         resultString += `
-            <h2>${result.snippet.title}</h2>
-            <p>${result.snippet.description}</p>
-            <p>Channel: ${result.snippet.channelTitle}</p>
-            <p>Published: ${result.snippet.publishedAt}</p>
-            <iframe src="https://www.youtube.com/embed/${result.id.videoId}" allow="autoplay; encrypted-media" width="350" height="200" frameborder="0" allowFullScreen></iframe>`
+            <div class="col-6">
+                <h4>${result.snippet.title}</h4>
+                <p>${result.snippet.description}</p>
+            </div>
+            <div class="col-6">
+                <iframe src="https://www.youtube.com/embed/${result.id.videoId}" allow="autoplay; encrypted-media" width="350" height="200" frameborder="0" allowFullScreen></iframe>
+            </div>
+            <div class="col-12 row-breaker"></div>`;
     });
     $('.display-trailer').html(resultString);
 } 

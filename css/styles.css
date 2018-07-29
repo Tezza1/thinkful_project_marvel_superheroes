@@ -1,5 +1,5 @@
 html  {
-    font-family: sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 /* HEADER */
@@ -21,12 +21,76 @@ h1 {
     margin-top: -1em;
 }
 
+/* FORM */
+fieldset {
+    border: none;
+    margin: 2em;
+}
+
+legend {
+    font-size: 0.1em;
+    color: white;
+}
+
+label {
+    font-size: 0.1em;
+    color: white;
+}
+
+input[type="text"] {
+    padding: 1.1em;
+    background-color: #ffafaf;
+    border: none;
+}
+
+input[type="button"] {
+    padding: 1em;
+    background-color: #eb1c24;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
 /* CHARACTER INFO */
 .character-pic {
     max-width: 100%;
     border-radius: 2%;
 }
 
-.movie-pic {
-    max-width: 20%;
+h2 {
+    text-transform: uppercase;
+    color: #eb1c24;
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+/* RESULTS */
+i {
+    margin-top: 3em;
+}
+
+h3, h4 {
+    color: #eb1c24;
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.extended-paragraph {
+    line-height: 1.3em;
+}
+
+.left-pic {
+    width: 95%;
+}
+
+.right-pic {
+    margin-top: 1.5em;
+    width: 80%;
+    border: 10px solid white;
+}
+
+.row-breaker {
+    margin-bottom: 3em;
 }
