@@ -16,18 +16,18 @@ Users can get information about their favorite Marvel superhero, including comic
 * APIs
 
 ### Live version:
-[Live app- hosted on Siteground](http://www.terrywebdev.services/project_%20interactive_quiz_app/app "Project submission hosted on Siteground")
+[Live app- hosted on Github pages](https://tezza1.github.io/thinkful_project_marvel_superheroes/ "Project submission hosted on Github Pages")
 
 ### Screenshots:
 
 #### Search
-![alt text](images/search.png)
+![Search page](images/search.png)
 
 #### Comics
-![alt text](images/comics.png)
+![Comic results](images/comics.png)
 
 #### Movies
-![alt text](images/movies.png)
+![Movie results](images/movies.png)
 
 #### Clips and Trailers
-![alt text](images/trailers.png)
+![Clips results](images/trailers.png)
