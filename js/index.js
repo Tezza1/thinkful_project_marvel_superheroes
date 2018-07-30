@@ -158,5 +158,4 @@ function renderYouTubeData(search_results) {
     $('.display-trailer').html(resultString);
 } 
 
-
 $(superHeroSearch)
