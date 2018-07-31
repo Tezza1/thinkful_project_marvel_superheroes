@@ -6,7 +6,7 @@ html  {
 .header-image {
     display: block;
     margin: 0 auto;
-    margin-top: -3em;
+    margin-top: 0.5em;
     padding-top: 0;
     width: 100%;
 }
@@ -18,13 +18,13 @@ h1 {
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.2em;
-    margin-top: -1em;
+    margin-top: 0;
 }
 
 /* FORM */
 fieldset {
     border: none;
-    margin: 2em;
+    margin: 1em;
 }
 
 legend {
@@ -35,25 +35,35 @@ legend {
 label {
     font-size: 0.1em;
     color: white;
+    display: block;
+    width: 100%
 }
 
-input[type="text"] {
-    border: none;
-    width: 15em;
+.awesomplete {
+    display: block;
+    width: 100%;
     font-size: 150%;
     font-weight: bold;
     padding: 0.5em;
-    border-bottom: 3px solid #eb1c24;
+    border: none;
+    /*border-bottom: 3px solid #eb1c24;*/
 }
 
-input[type="button"] {
+input[type="submit"] {
+    display: block;
+    width: 100%;
     padding: 1em;
     background-color: #eb1c24;
     border: none;
     color: white;
     font-weight: bold;
-    margin-left: 1em;
+    font-size: 150%;
     cursor: pointer;
+    margin-bottom: 2em;
+}
+
+input:focus {
+    outline:none;
 }
 
 /* CHARACTER INFO */
@@ -130,16 +140,23 @@ h3, h4 {
     margin-bottom: 3em;
 }
 
+/* BOTTOM OF PAGE */
+.to-top-link {
+    float: right;
+    margin-bottom: 1em;
+    font-size: 150%;
+    text-decoration: none;
+}
+
+.fa-arrow-up {
+    margin-top: 1em;    
+}
+
 /* TABLET */
 @media only screen and (max-width: 800px) {
     h1 {
         font-size: 160%;
     }
-    
-    input[type="text"] {
-        width: 12em;
-    }
-    
 }
 
 /* MOBILE PHONE */
@@ -148,27 +165,9 @@ h3, h4 {
         letter-spacing: 0;
         font-size: 140%;
     }
-    
-    input[type="text"] {
-        width: 8em;
-    }
-    
-    input[type="button"] {
-        padding: 0.5em;
-        margin-left: 0;
-    }
 }
 
 /* MOBILE PHONE */
 @media only screen and (max-width: 450px) {
-    
-    input[type="text"] {
-        display: block;
-    }
-    
-    input[type="button"] {
-        padding: 1em;
-        display: block;
-        margin-top: 0.5em;
-    }
+
 }

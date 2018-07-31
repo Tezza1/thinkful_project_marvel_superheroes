@@ -19,7 +19,7 @@
 
 <body>
     <div class="row">
-        <img class="header-image" src="images/The_Marvel_Universe.png" alt=""></img>
+        <img class="header-image" src="images/marvel-header-white.jpg" alt=""></img>
     </div>
     <header role="banner">
         <div class="row">
@@ -30,18 +30,19 @@
     </header>
     <div class="row">
         <div class="col-12">
-            <form role="form">
+            <a name="top-of-page"></a> 
+            <form role="form" action="#" class="search">
                 <fieldset>
                     <legend>Search for Marvel Superheros</legend>
                     <label for="superheo-search">Search</label>
-                    <input type="text" name=""  placeholder="Search" class="superhero-search awesomplete"
+                    <input type="text" name=""  placeholder="Search" class="superhero-search  awesomplete"
                         data-list= "Ant-Man, Black Panther, Captain America, Daredevil, Deadpool, Falcon, Hawkeye, Hulk, Iron Man, Spider-man, Thor, Wolverine, Doctor Strange, Nick Fury, Quicksilver" />
-                    <input type="button" value="Submit" class="js-superhero-search">
+                    <input type="submit" value="Submit" class="js-superhero-search">
                 </fieldset>
             </form>    
         </div>
     </div> <!-- end row -->
-    <main role="main" aria-live="assertive">
+    <main role="main" aria-live="assertive" hidden>
         <section role="region">
             <div class="row">
                 <div class="col-6">
@@ -63,7 +64,6 @@
                 <h3><i class="fas fa-book-open"></i> Comics</h3>
             </div>
             <div class="row display-comic-results flex-box">
-                <p><i class="fas fa-search"></i> Search to fill with data</p>
             </div><!-- end row -->
         </section>
 
@@ -72,7 +72,6 @@
             <div class="row">
                 <h3><i class="fas fa-video"></i> Movies</h3>
                 <div class="display-movies-results">
-                    <p><i class="fas fa-search"></i> Search to fill with data</p>
                 </div>    
             </div><!-- end row -->
         </section>
@@ -80,12 +79,17 @@
         <!-- display results for movie trailer-->
         <section role="region">
             <div class="row">
-                <h3><i class="fab fa-youtube"></i> Clips &amp; Trailer</h3>
+                <h3><i class="fab fa-youtube"></i> Clips</h3>
                 <div class="display-trailer">
-                    <p><i class="fas fa-search"></i> Search to fill with data</p>
                 </div>    
             </div><!-- end row -->    
         </section>
+        
+        <div class="row">
+            <div class="col-12">
+                <a class="to-top-link" href="#top-of-page"><i class="fas fa-arrow-up"></i> Back to top</a>    
+            </div>
+        </div>
     </main>
     
     <script src="https://cdn.rawgit.com/LeaVerou/awesomplete/gh-pages/awesomplete.min.js"></script>

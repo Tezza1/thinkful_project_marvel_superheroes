@@ -2,12 +2,14 @@ let superhero_character = "";
 
 // obtain data from clicked button
 function superHeroSearch() {
-  $(".js-superhero-search").click(
-    function(){
+  $('form').on('submit', function(e){
+        e.preventDefault();
         superhero_character = $('.superhero-search').val();
+        $('main').prop('hidden', false);
         getComicData();
         getMovieData();
         findYouTubeVideos()
+        // $('.superhero-search').val('');
   });  
 }
 
@@ -172,6 +174,9 @@ function renderYouTubeData(search_results) {
     else {
         $('.display-trailer').html('<p><i class="fas fa-exclamation-triangle"></i> No data to display</p>');
     }
+    
+    //scroll page down
+    $("html, body").animate({ scrollTop: 900}, 4000);
 } 
 
 $(superHeroSearch)
