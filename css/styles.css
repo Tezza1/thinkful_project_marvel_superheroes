@@ -142,10 +142,11 @@ h3, h4 {
 
 /* BOTTOM OF PAGE */
 .to-top-link {
-    float: right;
-    margin-bottom: 1em;
     font-size: 150%;
     text-decoration: none;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
 }
 
 .fa-arrow-up {
@@ -165,9 +166,4 @@ h3, h4 {
         letter-spacing: 0;
         font-size: 140%;
     }
-}
-
-/* MOBILE PHONE */
-@media only screen and (max-width: 450px) {
-
 }

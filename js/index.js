@@ -1,4 +1,6 @@
 let superhero_character = "";
+const NO_DATA = '<p><i class="fas fa-exclamation-triangle"></i> No data to display</p>';
+
 
 // obtain data from clicked button
 function superHeroSearch() {
@@ -6,9 +8,8 @@ function superHeroSearch() {
         e.preventDefault();
         superhero_character = $('.superhero-search').val();
         $('main').prop('hidden', false);
+
         getComicData();
-        // getMovieData();
-        // findYouTubeVideos()
         // $('.superhero-search').val('');
   });  
 }
@@ -39,7 +40,6 @@ function getComicData(){
 // render comic data to the page
 function renderComicData(search_results) {
     const COMIC_PATH = search_results.responseJSON.data.results;
-    console.log(COMIC_PATH);
     if (COMIC_PATH.length) {
         $('.character-name').html(`${COMIC_PATH[0].name}`);
         $('.character-description').html(`${COMIC_PATH[0].description}`);
@@ -69,7 +69,10 @@ function renderComicData(search_results) {
         $('.character-description').html(`<p></p>`);
         $('.character-pic').html(`<p></p>`);
         $('.character-links').html('<p></p>');
-        $('.display-comic-results').html('<p><i class="fas fa-exclamation-triangle"></i> No data to display</p>');
+        $('.display-comic-results').html(NO_DATA);
+        $('.display-trailer').html(NO_DATA)
+        $('.display-movies-results').html(NO_DATA);
+        
     }
 }
 
@@ -125,7 +128,7 @@ function renderMovieData(search_results) {
         display_data = false;
     }
     if (movieData === ""){
-        $('.display-movies-results').html('<p><i class="fas fa-exclamation-triangle"></i> No data to display</p>');
+        $('.display-movies-results').html(NO_DATA);
     }
     else {
         $('.display-movies-results').html(movieData);
@@ -178,11 +181,11 @@ function renderYouTubeData(search_results) {
         $('.display-trailer').html(resultString);
     }
     else {
-        $('.display-trailer').html('<p><i class="fas fa-exclamation-triangle"></i> No data to display</p>');
+        $('.display-trailer').html(NO_DATA);
     }
     
     //scroll page down
-    $("html, body").animate({ scrollTop: 900}, 4000);
+    $("html, body").animate({ scrollTop: 900}, 1000);
 } 
 
 $(superHeroSearch)
