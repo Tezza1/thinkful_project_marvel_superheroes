@@ -7,8 +7,8 @@ function superHeroSearch() {
         superhero_character = $('.superhero-search').val();
         $('main').prop('hidden', false);
         getComicData();
-        getMovieData();
-        findYouTubeVideos()
+        // getMovieData();
+        // findYouTubeVideos()
         // $('.superhero-search').val('');
   });  
 }
@@ -39,6 +39,7 @@ function getComicData(){
 // render comic data to the page
 function renderComicData(search_results) {
     const COMIC_PATH = search_results.responseJSON.data.results;
+    console.log(COMIC_PATH);
     if (COMIC_PATH.length) {
         $('.character-name').html(`${COMIC_PATH[0].name}`);
         $('.character-description').html(`${COMIC_PATH[0].description}`);
@@ -51,11 +52,16 @@ function renderComicData(search_results) {
         }
         $('.character-links').html(character_links);
     
-        // show stories in a list
+        // show series
         let comic_stories = "";
         for (let i = 0; i < COMIC_PATH[0].stories.items.length; i++){
             comic_stories += `<div><i class="fas fa-square"></i> ${COMIC_PATH[0].series.items[i].name}</div>`
         }
+        
+        // if a marvel character exits, then search movies and youtube
+        getMovieData();
+        findYouTubeVideos()
+        
         $('.display-comic-results').html(comic_stories);
     }
     else {
