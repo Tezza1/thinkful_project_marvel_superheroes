@@ -43,7 +43,7 @@ function renderComicData(search_results) {
     if (COMIC_PATH.length) {
         $('.character-name').html(`${COMIC_PATH[0].name}`);
         $('.character-description').html(`${COMIC_PATH[0].description}`);
-        $('.character-pic').html(`<img src="${COMIC_PATH[0].thumbnail.path}.jpg" alt="" class="character-pic"/>`);
+        $('.character-pic').html(`<img src="${COMIC_PATH[0].thumbnail.path}.jpg" alt="Profile pic of ${COMIC_PATH[0].name}" class="character-pic"/>`);
         
         // show links in a list
         let character_links = "";
@@ -117,10 +117,10 @@ function renderMovieData(search_results) {
                     <h3>${search_results[i].title}</h3>
                     <p class="extended-paragraph">${search_results[i].overview}<p>
                     <p>${search_results[i].release_date}</p>
-                    <img class="left-pic" src="https://image.tmdb.org/t/p/w500/${search_results[i].backdrop_path}" alt=""/>
+                    <img class="left-pic" src="https://image.tmdb.org/t/p/w500/${search_results[i].backdrop_path}" alt="Poster of ${search_results[i].title}"/>
                 </div>
                 <div class="col-6">
-                    <img class="right-pic" src="https://image.tmdb.org/t/p/w500/${search_results[i].poster_path}" alt=""/>
+                    <img class="right-pic" src="https://image.tmdb.org/t/p/w500/${search_results[i].poster_path}" alt="Poster of ${search_results[i].title}"/>
                 </div>
                 <div class="col-12 row-breaker"></div>
             `;            
